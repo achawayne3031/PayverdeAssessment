@@ -1,0 +1,49 @@
+{
+  "apiTests": [
+    {
+      "description": "Create a new user",
+      "method": "POST",
+      "url": "http://localhost:8080/api/user/create",
+      "requestBody": {
+        "fullName": "wayne",
+        "email": "achawaynetest@gmail.com"
+      },
+      "expectedResponse": {
+        "message": "User created.",
+        "status": true,
+        "timeCreated": "2025-02-24T13:16:51.3005568",
+        "data": null
+      }
+    },
+    {
+      "description": "Fund user wallet",
+      "method": "POST",
+      "url": "http://localhost:8080/api/user/add-fund",
+      "requestBody": {
+        "beneficiaryId": 3,
+        "amount": "200"
+      },
+      "expectedResponse": {
+        "message": "Account funded.",
+        "status": true,
+        "timeCreated": "2025-02-24T14:57:53.1921051",
+        "data": null
+      }
+    },
+    {
+      "description": "Get user Transaction logs",
+      "method": "POST",
+      "url": "http://localhost:8080/api/user/fetch-transaction-logs",
+      "requestBody": {
+        "beneficiaryId": 3,
+        "amount": "200"
+      },
+      "expectedResponse": {
+        "message": "user transaction logs.",
+        "status": true,
+        "timeCreated": "2025-02-24T14:49:11.2779131",
+        "data": []
+      }
+    }
+  ]
+}
